@@ -26,7 +26,7 @@ mkdir -p ~/tools
 mkdir -p ~/lists
 
 # base packages
-sudo apt -y install tmux cargo locales texlive-font-utils rubber texlive-xetex texlive-luatex latexmk ca-certificates libgcc1 libgssapi-krb5-2 liblttng-ust0 libstdc++6 zlib1g xsltproc masscan libffi-dev libssl-dev curl nmap ufw neovim fail2ban net-tools zsh jq build-essential python3 python3-pip python3-venv unzip git p7zip libpcap-dev rubygems ruby-dev grc wget
+sudo apt -y install tmux cargo locales texlive-font-utils rubber texlive-xetex texlive-luatex latexmk ca-certificates libgcc1 libgssapi-krb5-2 liblttng-ust0 libstdc++6 zlib1g xsltproc masscan libffi-dev libssl-dev curl nmap ufw neovim fail2ban net-tools zsh jq build-essential python3 python3-pip python3-venv unzip git p7zip libpcap-dev rubygems ruby-dev grc wget git
 
 # misc tools
 wget -q https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O - | sh
@@ -42,17 +42,16 @@ GO111MODULE=on /usr/local/go/bin/go get -v github.com/projectdiscovery/dnsx/cmd/
 GO111MODULE=on /usr/local/go/bin/go get -u github.com/lc/gau
 GO111MODULE=on /usr/local/go/bin/go get -v github.com/projectdiscovery/httpx/cmd/httpx
 GO111MODULE=on /usr/local/go/bin/go get -v github.com/projectdiscovery/interactsh/cmd/interactsh-client
-GO111MODULE=on /usr/local/go/bin/go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
-GO111MODULE=on /usr/local/go/bin/go get github.com/d3mondev/puredns/v2
-GO111MODULE=on /usr/local/go/bin/go get -v github.com/projectdiscovery/shuffledns/cmd/shuffledns
-GO111MODULE=on /usr/local/go/bin/go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 
-/usr/local/go/bin/go get -u github.com/tomnomnom/anew
-/usr/local/go/bin/go get -u github.com/tomnomnom/fff
-/usr/local/go/bin/go get -u github.com/ffuf/ffuf
-/usr/local/go/bin/go get -u github.com/tomnomnom/gron
-/usr/local/go/bin/go get -u github.com/tomnomnom/meg
-/usr/local/go/bin/go get -u github.com/tomnomnom/qsreplace
+GO111MODULE=on /usr/local/go/bin/go get -u github.com/tomnomnom/anew
+GO111MODULE=on /usr/local/go/bin/go get -u github.com/tomnomnom/fff
+GO111MODULE=on /usr/local/go/bin/go get -u github.com/ffuf/ffuf
+GO111MODULE=on /usr/local/go/bin/go get -u github.com/tomnomnom/gron
+GO111MODULE=on /usr/local/go/bin/go get -u github.com/tomnomnom/meg
+GO111MODULE=on /usr/local/go/bin/go get -u github.com/tomnomnom/qsreplace
+
+/usr/local/go/bin/go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+/usr/local/go/bin/go install github.com/d3mondev/puredns/v2@latest
 
 /usr/local/go/bin/go install github.com/hakluke/hakrawler@latest
 
