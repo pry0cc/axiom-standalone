@@ -8,7 +8,7 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # vars
-GO_URL="https://golang.org/dl/go1.16.3.linux-amd64.tar.gz"
+GO_URL="https://golang.org/dl/go1.17.linux-amd64.tar.gz"
 START=$(pwd)
 
 sudo apt update
