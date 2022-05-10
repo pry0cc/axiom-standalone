@@ -52,6 +52,8 @@ GO111MODULE=on /usr/local/go/bin/go get -u github.com/tomnomnom/qsreplace
 
 /usr/local/go/bin/go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 /usr/local/go/bin/go install github.com/d3mondev/puredns/v2@latest
+/usr/local/go/bin/go install github.com/pry0cc/tew@latest
+/usr/local/go/bin/go install github.com/leesoh/np/cmd/np@latest
 
 /usr/local/go/bin/go install github.com/hakluke/hakrawler@latest
 
