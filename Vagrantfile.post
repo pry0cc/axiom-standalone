@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
+  config.vm.synced_folder "~/docs", "/home/vagrant/docs", type: "nfs", nfs_version: 4, "nfs_udp": false, mount_options: ["rw", "vers=4", "tcp", "nolock"]
   config.vm.box = "axiom-v2"
   config.vm.hostname = "HOSTNAME"
   config.vm.provider :libvirt do |libvirt|

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+name="$1"
+
+pat="/home/op/vms/$name"
+cd "$pat"
+
+vagrant destroy

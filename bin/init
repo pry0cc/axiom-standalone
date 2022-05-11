@@ -1,0 +1,15 @@
+#!/bin/bash
+
+name="$1"
+
+res="/home/op/vms/axiom-standalone"
+pat="/home/op/vms/$name"
+
+mkdir -p "$pat"
+cd "$pat"
+
+vagrant init axiom-v2
+cp "$res/Vagrantfile.post" "$pat/Vagrantfile"
+sed -i "s|HOSTNAME|$name|g" Vagrantfile
+vagrant up 
+vagrant ssh-config | sed "s|Host default|Host $name|g" | tee -a ~/.ssh/config
