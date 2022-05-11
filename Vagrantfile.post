@@ -1,0 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "axiom-v2"
+  config.vm.hostname = "HOSTNAME"
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.cpus = 4
+    libvirt.memory = 4096
+    libvirt.cpuset = '1-4,^3,6'
+    libvirt.cputopology :sockets => '2', :cores => '2', :threads => '1'
+  end
+end
